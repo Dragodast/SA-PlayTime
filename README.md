@@ -32,5 +32,5 @@ end)
 
 That's all now it will work. Playtime is editable in MySQL
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](RNQTX9PQA9WPC)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=D2C3TTRXZSUQN)
 
