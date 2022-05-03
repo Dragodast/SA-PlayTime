@@ -1,11 +1,12 @@
 # SA-PlayTime
 
-Basic script for counting PlayTime ingame. So first what we need to edit is QB-Core where we add to QB-Core > Server > player.lua
-Somewhere in metadata (for example line 70)
+Basic script for counting PlayTime ingame. So first what we need to edit is QB-Core where we add to QB-Core > Server > player.lua this lines
+somewhere in metadata (for example line 70)
 ```PlayerData.metadata['playtime'] = PlayerData.metadata['playtime'] or 0```
 
-and now we need to add to event which will increase that value every time what we have set in QB-Core
-QB-Core > server > events.lua
+and now we need to add this to QB-Core > server > events.lua ```local playtimen = tonumber(playtimes) -- 5=5 minutes
+        Player.PlayerData.metadata['playtime'] = playtimen + 5``` to increase that value every time what we have set. 5 minutes is there because this event is triggered/updated every 5 minutes it is set in QBCore config I think.
+QB-Core > server > events.lua 
 ```
 RegisterNetEvent('QBCore:UpdatePlayer', function(PlayerData)
     local src = source
