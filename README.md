@@ -5,7 +5,7 @@ somewhere in metadata (for example line 70)
 ```PlayerData.metadata['playtime'] = PlayerData.metadata['playtime'] or 0```
 
 and now we need to add this to QB-Core > server > events.lua ```local playtimen = tonumber(playtimes) -- 5=5 minutes
-        Player.PlayerData.metadata['playtime'] = playtimen + 5``` to increase that value every time what we have set. 5 minutes is there because this event is triggered/updated every 5 minutes it is set in QBCore config I think.
+        Player.PlayerData.metadata['playtime'] = playtimen + QBConfig.UpdateInterval``` to increase that value every time what we have set.
 QB-Core > server > events.lua 
 ```
 RegisterNetEvent('QBCore:UpdatePlayer', function(PlayerData)
@@ -16,7 +16,7 @@ RegisterNetEvent('QBCore:UpdatePlayer', function(PlayerData)
         local newThirst = Player.PlayerData.metadata['thirst'] - QBCore.Config.Player.ThirstRate
         local playtimes = Player.PlayerData.metadata['playtime']
         local playtimen = tonumber(playtimes) -- 5=5 minutes
-        Player.PlayerData.metadata['playtime'] = playtimen + 5
+        Player.PlayerData.metadata['playtime'] = playtimen + QBConfig.UpdateInterval
         if newHunger <= 0 then
             newHunger = 0
         end
