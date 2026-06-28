@@ -1,5 +1,6 @@
-Config = {}
+Config = {
+    Command = "playtime" --Command which will display playtime in chat
+    ThreadIncrease = 5 -- Every 5 minutes will be playtime on char increased
+}
 
-Config.Command = "odehrano" --Command which will display playtime in chat
-
---Language you have to change in fxmanifest.lua
+--Lang could be set in fxmanifest.lua

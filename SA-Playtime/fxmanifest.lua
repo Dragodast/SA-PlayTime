@@ -3,12 +3,16 @@ game 'gta5'
 
 description 'San Andreas - PlayTime'
 author "Dragodast"
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts {
 	'config.lua',
     '@qb-core/shared/locale.lua',
-    'locale/cs.lua' --Here change your locale locale/en.lua for example
+    'locale/en.lua' --Here change your locale locale/en.lua for example
+}
+
+client_scripts {
+    "client/client.lua"
 }
 
 server_scripts {
